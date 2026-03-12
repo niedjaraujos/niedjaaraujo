@@ -15,7 +15,7 @@
   <body>
     <!-- CABEÇALHO -->
     <header>
-      <a href="" class="logo">< n.araujo/></a>
+      <a href="" class="logo">< n.araujo /></a>
       <!-- <button
         class="menu-hamburguer"
         aria-label="menu"
@@ -213,10 +213,64 @@
         <div class="container">
           <div class="container__header">
             <p class="subtitle">// Habilidades técnicas</p>
-            <h2>Stack & <span class="accent-secondary">Ferramentas</span></h2>
+            <h2>Stack & <span class="cs italic">Ferramentas</span></h2>
           </div>
 
-          <div class="skills__container"></div>
+          <div class="skills__container">
+            <ul class="skills__cards">
+              <li class="skills__cards-card">
+                <h3 class="cp">Linguagens</h3>
+                <p>
+                  Domínio de linguagens modernas para desenvolvimento web,
+                  criando aplicações interativas e escaláveis.
+                </p>
+                <p>JavaScript ES6+ · TypeScript · HTML5 · CSS3</p>
+              </li>
+              <li class="skills__cards-card">
+                <h3 class="cp">CSS & Responsividade</h3>
+                <p>
+                  Estilização de interfaces com CSS moderno, design responsivo e
+                  adaptáveis para desktop, tablet e mobile.
+                </p>
+                <p>Mobile-First · Flexbox · CSS Grid · BEM · Media Queries</p>
+              </li>
+              <li class="skills__cards-card">
+                <h3 class="cp">JavaScript & React</h3>
+                <p>
+                  Desenvolvimento de interfaces modernas com React, código
+                  reutilizável e maior escalabilidade para aplicações web.
+                </p>
+                <p>Manipulação DOM · APIs REST · React Hooks · Canvas API</p>
+              </li>
+              <li class="skills__cards-card">
+                <h3 class="cp">Acessibilidade & Performance</h3>
+                <p>
+                  Implementação de boas práticas de acessibilidade e otimização
+                  de performance alinhadas aos padrões modernos da web.
+                </p>
+                <p>HTML Semântico · WAI-ARIA · Lighthouse</p>
+              </li>
+              <li class="skills__cards-card">
+                <h3 class="cp">Ferramentas</h3>
+                <p>
+                  Ferramentas modernas que otimizam o fluxo de desenvolvimento,
+                  depuração e colaboração.
+                </p>
+                <p>Git · GitHub · Figma · VS Code · DevTools</p>
+              </li>
+              <li class="skills__cards-card">
+                <h3 class="cp">Soft Skills</h3>
+                <p>
+                  Habilidades interpessoais com foco em resolução eficiente de
+                  desafios e aprendizado contínuo para evolução constante.
+                </p>
+                <p>
+                  Comunicação · Trabalho em equipe · Análise crítica ·
+                  Organização
+                </p>
+              </li>
+            </ul>
+          </div>
         </div>
       </section>
 
@@ -225,7 +279,7 @@
         <div class="container">
           <div class="container__header">
             <p class="subtitle">// O que eu construí</p>
-            <h2>Projetos em Destaque</h2>
+            <h2>Projetos em <span class="italic">Destaque</span></h2>
           </div>
 
           <div class="cards">
@@ -275,7 +329,9 @@
       <section id="sobre">
         <div class="container">
           <p class="subtitle">// sobre mim</p>
-          <h2>Uma dev com visão centrada no usuário</h2>
+          <h2>
+            Uma dev com visão <span class="italic">centrada no usuário</span>
+          </h2>
           <p>
             Sou desenvolvedora front-end em formação, com foco em criar
             experiências digitais <strong>inclusivas e acessíveis</strong>.
@@ -289,19 +345,56 @@
             usuário final — o que se reflete em interfaces mais intuitivas e
             empáticas.
           </p>
-          <div class="about-quote"></div>
+          <div class="about-quote">
+            "Acredito que a interface é a voz visual da marca. Cada detalhe
+            tipográfico, cada transição, cada estado de hover — tudo comunica."
+          </div>
+        </div>
+      </section>
+
+      <!-- SEÇÃO APRENDIZADO -->
+      <section id="educacao">
+        <div class="container">
+          <div class="container__header">
+            <p class="subtitle">// formação & cursos</p>
+            <h2>Educação & <span class="italic">Aprendizado</span></h2>
+          </div>
+          <div class="edu__container">
+            <div class="edu-card reveal">
+              <span class="edu-badge on">Em andamento</span>
+              <h3 class="edu-course">Análise e Desenvolvimento de Sistemas</h3>
+              <p class="edu-inst">Gran Faculdade · 2025 – 2027</p>
+            </div>
+
+            <div class="edu-card reveal" style="transition-delay: 0.2s">
+              <span class="edu-badge on">Em andamento</span>
+              <h3 class="edu-course">Formação Full Stack</h3>
+              <p class="edu-inst">B7Web · Fundamentos e Front-End</p>
+            </div>
+            <div class="edu-card reveal" style="transition-delay: 0.3s">
+              <span class="edu-badge on">Em andamento</span>
+              <h3 class="edu-course">Desenvolvimento Full Stack</h3>
+              <p class="edu-inst">Vai Na Web · HTML, SASS, JS, Node, React</p>
+            </div>
+            <div class="edu-card reveal" style="transition-delay: 0.4s">
+              <span class="edu-badge done">Concluído · 2024</span>
+              <h3 class="edu-course">
+                Oracle Next Education F2 T6 — Front-End
+              </h3>
+              <p class="edu-inst">Alura · React, Front-End, Agilidade</p>
+            </div>
+          </div>
         </div>
       </section>
 
       <!-- SEÇÃO CONTATO -->
-
       <section id="contato">
         <div class="container">
           <p class="subtitle">// Contato</p>
           <h2>Vamos construir algo sólido juntos?</h2>
           <p>
-            Estou aberta a oportunidades, freelances e trocas de experiência. Me
-            chama! 💬
+            Estou aberta a oportunidades, freelances, parcerias estratégicas e
+            trocas de experiência. Me chama! <span class="cp">✦</span>
           </p>
 
           <div class="contato__footer">
@@ -318,8 +411,11 @@
 
     <!-- FOOTER -->
     <footer>
-      <p>© 2025 Niedja Araujo. Feito com HTML, CSS & JS.</p>
-      <p>Pernambuco · Brasil · Tecnologia com Propósito</p>
+      <p>
+        © 2025 <span class="cp">Niedja Araujo</span>. Feito com HTML, CSS &amp;
+        JS.
+      </p>
+      <p>Pernambuco <span class="cp">·</span> Brasil</p>
     </footer>
 
     <script src="script.js"></script>
