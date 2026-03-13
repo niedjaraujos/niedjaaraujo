@@ -364,7 +364,6 @@ h1 {
   display: flex;
   flex-direction: column;
   align-items: center;
-
   gap: 2rem;
 }
 .sobre__text {
@@ -374,7 +373,6 @@ h1 {
     margin-bottom: 1rem;
   }
 }
-
 strong {
   color: var(--color-sub);
 }
@@ -393,7 +391,6 @@ strong {
   max-width: 480px;
   width: 90%;
 }
-
 .sobre__image img {
   width: 100%;
   height: auto;
@@ -402,7 +399,102 @@ strong {
   border: 1px solid var(--color-primary);
 }
 
+/* SEÇÃO APRENDIZADO */
+.edu__container {
+  margin-top: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+.edu-card {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  padding-block: 1.75rem;
+  border-top: 1px solid var(--border);
+  gap: 2rem;
+  position: relative;
+  transition: background 0.3s;
+  overflow: hidden;
+}
+.edu-card::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: #14141469;
+  width: 100%;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.5s;
+  z-index: 0;
+}
+/* .edu-card:hover {
+  background: #141414;
+} */
+.edu-card:hover::after {
+  transform: scaleX(1);
+}
+.edu-card:hover .course-name,
+.edu-card:hover .edu-year {
+  color: var(--color-primary);
+}
+.edu-num {
+  color: var(--muted);
+  font-size: 0.75rem;
+}
+.course-name {
+  font-size: clamp(1rem, 5vw, 2.5rem);
+  transition: color 0.3s;
+}
+
+.course-inst {
+  color: var(--muted);
+}
+.edu-tags-inline {
+  display: flex;
+  gap: 1rem;
+}
+.edu-tag-inline {
+  font-size: 0.58rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--muted);
+  border: 1px solid var(--border);
+  padding: 5px 10px;
+}
+.edu-year {
+  font-size: 0.68rem;
+  letter-spacing: 0.18em;
+  color: var(--muted);
+}
+.last-row {
+  border-bottom: 1px solid var(--border);
+}
+
 /* SEÇÃO CONTATO E FOOTER */
+
+#contato {
+  position: relative;
+  overflow: hidden;
+}
+
+#contato::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 600px;
+  height: 400px;
+
+  background: radial-gradient(
+    circle,
+    rgba(255, 238, 0, 0.068) 0%,
+    rgba(255, 230, 0, 0) 60%
+  );
+
+  pointer-events: none;
+}
 .contact__title {
   font-size: clamp(2rem, 10vw, 5rem);
   margin-bottom: 0;
@@ -425,6 +517,7 @@ footer {
   letter-spacing: 0.2em;
   border-top: 1px solid var(--border);
 }
+
 @media (width>= 1024px) {
   nav {
     display: block;
@@ -454,5 +547,10 @@ footer {
   }
   .sobre__text {
     margin-right: 10rem;
+  }
+  .edu-card {
+    display: grid;
+    grid-template-columns: 80px 1fr 400px 140px;
+    gap: 5rem;
   }
 }
