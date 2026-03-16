@@ -412,75 +412,80 @@ h1 {
 /* PROJETOS */
 
 .projetos__cards {
-  grid-template-columns: 1fr;
+  display: flex;
+  flex-direction: column;
+  gap: 5rem;
 }
 .projetos__card {
   display: flex;
   flex-direction: column;
   text-align: center;
   align-items: center;
-  gap: 4px;
-  background: var(--surface);
-  border: 1px solid var(--border);
-  padding: 2rem;
-
-  position: relative;
-  overflow: hidden;
-  cursor: none;
-  transition: border-color 0.3s;
-  transition: transform 0.4s;
 }
-.projetos__card:hover {
-  border-color: var(--color-secondary);
+
+/* .projetos__card:hover {
   transform: translateX(4px);
+} */
+.projetos__card-image {
+  display: block;
+  overflow: hidden;
 }
-
-.projetos__card:hover .number-card {
-  color: var(--color-secondary);
+.projetos__card-image img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  object-position: top;
 }
-
-.projetos__card-number {
-  font-weight: 700;
-  font-size: 3rem;
-  transition: color 0.3s;
-}
-
 .projetos__card-content {
+  background: linear-gradient(180deg, #050505, #181818);
   display: flex;
   flex-direction: column;
-  flex: 1;
+  gap: 1rem;
+  padding: 2rem;
 }
-
+.project__label {
+  color: var(--muted);
+  text-transform: uppercase;
+  font-size: 0.7rem;
+  margin-top: 0.5rem;
+}
 .projetos__card-title {
-  font-size: clamp(1rem, 5vw, 2rem);
+  font-size: clamp(1rem, 10vw, 2rem);
+  color: var(--color-sub);
 }
 .projetos__card-text {
   color: var(--muted);
+  max-width: 600px;
+  margin-bottom: 1rem;
+}
+.projetos__card-footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
 }
 .projetos__card-tags {
-  margin-top: 1rem;
+  margin-top: auto;
   display: flex;
-  justify-content: center;
   flex-wrap: wrap;
+
   gap: 1rem;
 }
 .projetos__card-tag {
+  background: rgba(255, 255, 255, 0.05);
   text-transform: uppercase;
-  font-size: 0.65rem;
-  border: 1px solid var(--color-dim);
-  padding: 4px 8px;
+  font-size: 0.7rem;
+  border: 1px solid var(--border);
+  padding: 4px 10px;
 }
 .projetos__card-link {
-  margin-top: 1rem;
-  color: var(--border);
-  border: 1px solid var(--border);
+  display: flex;
+  align-items: center;
+  white-space: nowrap;
+  gap: 0.5rem;
+  color: var(--color-primary);
+}
 
-  padding: 0.4rem 0.8rem;
-}
-.projetos__card:hover .projetos__card-link {
-  background-color: var(--color-secondary);
-  color: #050505;
-}
 /* SEÇÃO SOBRE */
 .sobre__content {
   display: flex;
@@ -645,6 +650,7 @@ footer {
   #hero .container,
   .hero__btns,
   .sobre__content,
+  .projetos__cards,
   footer {
     flex-direction: row;
     gap: 2.5rem;
@@ -675,20 +681,12 @@ footer {
     grid-template-columns: 80px 1fr 400px 140px;
     gap: 5rem;
   }
-  .projetos__card {
-    display: grid;
-    grid-template-columns: 80px 1fr auto;
-    gap: 5rem;
-  }
-  .projetos__card-text {
-    max-width: 700px;
-    margin-right: 10rem;
-  }
+
   .projetos__card-content {
     text-align: start;
-    flex: 1;
   }
-  .projetos__card-tags {
-    justify-content: flex-start;
+  .projetos__card-footer {
+    flex-direction: row;
+    justify-content: space-between;
   }
 }
